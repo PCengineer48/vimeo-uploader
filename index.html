@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,shrink-to-fit=no,user-scalable=no,initial-scale=1,minimum-scale=1,minimal-ui">
+    <title>Vimeo Uploader</title>
+    <meta name="description" content="Upload videos to your Vimeo account" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <div><img src="img/vimeo-uploader.png" class="logo"></img>
+            </div>
+            <p class="lead">Upload videos to your Vimeo account.</p>
+        </div>
+        <p class="lead">Enter vimeo access token, name and description. <br>Drag your video into the dotted area to upload to your vimeo account.</p>
+        <div id="progress-container" class="progress">
+            <div id="progress" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100" style="width: 0%">&nbsp;0%
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="results"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="form-group">
+                <input type="text" id="accessToken" class="form-control" placeholder="Vimeo access token" required autofocus></input>
+                <div class="help">Create an access token here: <a href="https://developer.vimeo.com/apps" target="_blank">https://developer.vimeo.com/apps</a></div>
+            </div>
+            <div class="form-group">
+                <input type="text" name="name" id="videoName" class="form-control" placeholder="Video name" value=""></input>
+            </div>
+            <div class="form-group">
+                <input type="text" name="description" id="videoDescription" class="form-control" placeholder="Video description" value=""></input>
+            </div>
+			<div class="checkbox">
+                <label>
+                    <input type="checkbox" id="upgrade_to_1080" name="upgrade_to_1080"> Upgrade to 1080 
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="make_private" name="make_private"> Make Private 
+                </label>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div id="drop_zone">Drop Videos</div>
+            <br/>
+            <label class="btn btn-block btn-info">
+                Browse&hellip; <input id="browse" type="file" style="display: none;">
+            </label>
+          </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container text-center">
+            <p class="copyright">Developed by <a class="brand" href="https://github.com/pcengineer48">Sedat Can Uygur</a></p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vimeo-upload.js"></script>
+	<script type="text/javascript" src="js/vimeo-upload-functions.js"></script>
+    <!-- <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-57984417-1', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+</body>
+</html>
